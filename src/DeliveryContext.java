@@ -7,7 +7,7 @@ public class DeliveryContext {
         this.deliveryStrategy = deliveryStrategy;
     }
 
-    public void deliverGift(Child child){
+    public void deliverGift(Child child, Gift gift){
 
     }
 }

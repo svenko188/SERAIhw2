@@ -6,7 +6,7 @@ public class BookFactory {
 
     public BookFactory(){
         this.book = new Book(Genre.FANTASY);
-        this.book.setTitle("JavaProg");
+        this.book.setName("JavaProg");
         this.book.setAuthor("John Doe");
         this.book.setGenre(Genre.FANTASY);
         this.book.setYear(2000);

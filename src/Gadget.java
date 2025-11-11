@@ -1,8 +1,7 @@
 
 
-public class Gadget implements GadgetInterface {
+public class Gadget extends Gift implements GadgetInterface {
 
-    private String name;
     private String manufacturer;
     private int price;
     private float weight;
@@ -10,13 +9,12 @@ public class Gadget implements GadgetInterface {
 
     @Override
     public void sendMessage() {
-        System.out.println("I am " + this.name + "and  I'm made by" + this.manufacturer);
+        System.out.println("I am a Gadget made by" + this.manufacturer);
     }
 
 
-    public String getName() {
-        return name;
-    }
+
+
 
     public String getManufacturer() {
         return manufacturer;
@@ -33,9 +31,7 @@ public class Gadget implements GadgetInterface {
 
 
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;

@@ -49,18 +49,26 @@ class Main {
             LsChild.add(child);
         }
 
+
+
         for (Child child : LsChild) {
             if(child.getLocation().equals("Island")){
                 DeliveryContext deliveryContext = new DeliveryContext(new BoatStrategy());
-                deliveryContext.deliverGift(child);
+                BookFactory bookFactory = new BookFactory(1);
+                Book book = bookFactory.getBook();
+                deliveryContext.deliverGift(child, book);
             }
             else if(child.getLocation().equals("Mountain")){
                 DeliveryContext deliveryContext = new DeliveryContext(new SleighStrategy());
-                deliveryContext.deliverGift(child);
+                BookFactory bookFactory = new BookFactory(2);
+                Book book = bookFactory.getBook();
+                deliveryContext.deliverGift(child, book);
             }
             else if(child.getLocation().equals("City")){
                 DeliveryContext deliveryContext = new DeliveryContext(new DroneStrategy());
-                deliveryContext.deliverGift(child);
+                GadgetFactory gadgetFactory = new GadgetFactory(3);
+                Gadget gadget = gadgetFactory.getGadget();
+                deliveryContext.deliverGift(child, gadget);
             }
         }
     }

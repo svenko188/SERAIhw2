@@ -1,14 +1,18 @@
 
 
-public class Book implements BookInterface {
+public class Book extends Gift implements BookInterface {
 
     private Genre genre;
-    private String title;
     private String author;
     private int year;
     @Override
     public void readBook(){
         System.out.println("I am reading a "+ this.genre + " book.");
+    }
+
+
+    public void sendMessage() {
+        System.out.println("I am " + this.getName());
     }
 
     public Book (Genre genre){
@@ -18,9 +22,6 @@ public class Book implements BookInterface {
         return genre;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
     public String getAuthor() {
         return author;
@@ -33,10 +34,6 @@ public class Book implements BookInterface {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public void setAuthor(String author) {

@@ -1,5 +1,6 @@
 public class DroneStrategy implements DeliveryStrategy{
-    public void deliverGift(Child child){
-        System.out.println("DeliverGift by Drone to "+ child.getName());
+    public void deliverGift(Child child, Gift gift){
+
+        System.out.println("Deliver "+ gift.getName()+ " by Drone to "+ child.getName());
     }
 }
